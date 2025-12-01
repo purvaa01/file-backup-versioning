@@ -8,14 +8,21 @@ This project automates the process of backing up important files and storing the
 It also includes CI pipelines using GitHub Actions and Jenkins, making it suitable as a beginner-friendly SCM / DevOps project.
 
 📁 Folder Structure
-.
-├── .github/workflows  
-├── backups/               # Auto-generated backup files stored here
-├── backup.sh              # Main shell script to take backups
-├── config.txt             # List of directories/files that need backup
-├── backup.log             # Log file for tracking backup runs
-├── Jenkinsfile            # Jenkins CI pipeline
-└── README.md              # Project documentation
+
+. ├── .github/workflows  
+
+├── backups/   
+
+├── backup.sh              
+
+├── config.txt            
+
+├── backup.log             
+
+├── Jenkinsfile            
+
+└── README.md              
+
 
 ⚙️ Features
 
@@ -46,6 +53,7 @@ Edit config.txt and add paths like:
 
 
 This will:
+
 ✔ Read paths from config.txt
 
 ✔ Create a timestamped tar archive
