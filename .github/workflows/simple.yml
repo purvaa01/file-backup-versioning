@@ -1,0 +1,27 @@
+name: simple CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: make backup script executable
+        run: chmod +x backup.sh
+
+      - name: basic shell syntax check
+        run: bash -n backup.sh
+
+      - name: Run backup script
+        run: ./backup.sh
+
+      - name: List generated file
+        run: ls -R .
+
+
